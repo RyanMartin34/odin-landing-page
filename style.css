@@ -2,17 +2,20 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
+  scroll-behavior: smooth;
 }
 
-/* Header Section */
-.header-container {
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #1f2937;
-  height: 10vh;
 }
 
-header {
-  max-width: 1200px;
+.header-container {
+  min-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -20,55 +23,70 @@ header {
   padding: 20px 0px;
 }
 
-.nav-links {
-  display: flex;
-  gap: 20px;
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #f9faf8;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border: 1px solid white;
+  padding-left: 2px;
 }
 
-.nav-links li {
+.highlight {
+  background-color: #3882f6;
+}
+
+.header-container ul {
+  display: flex;
+  gap: 20px;
   list-style: none;
 }
 
-.nav-links a {
+.header-container a {
   text-decoration: none;
-  color: #e5e7eb;
   font-size: 18px;
+  color: #e5e7eb;
 }
 
-.logo {
-  font-size: 24px;
-  color: #f9faf8;
-  font-weight: bold;
-}
-
-.hero-container {
-  background-color: #1f2937;
-  height: 90vh;
-  display: flex;
-}
-
-.hero-content {
+.content-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   display: flex;
-  align-items: center;
 }
 
-.left {
+.content-left {
   display: flex;
   flex-direction: column;
+  gap: 20px;
   flex: 1;
   justify-content: center;
   align-items: flex-start;
-  gap: 20px;
 }
 
-.left p {
+.content-left h1 {
+  font-size: 48px;
+  color: #f9faf8;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.content-left p {
   font-size: 18px;
   color: #e5e7eb;
 }
 
-.right {
+.content-left button {
+  border: none;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 15px 40px;
+  border-radius: 40px;
+  background-color: #3882f6;
+  color: #f9faf8;
+}
+
+.content-right {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -76,21 +94,134 @@ header {
   align-items: center;
 }
 
-.right img {
+.content-right img {
   max-width: 100%;
 }
 
-h1 {
-  font-size: 48px;
-  color: #f9faf8;
+.info {
+  background-color: white;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
-button {
-  border: none;
+.info-title h2 {
+  font-size: 36px;
+  color: #1f2937;
+  font-weight: 900;
+}
+
+.info-box-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.info-box {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.info-box img {
+  border: 5px solid #3882f6;
+  border-radius: 15px;
+  width: 200px;
+  height: auto;
+}
+
+.quote-parent {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e7eb;
+}
+
+.quote-child {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1f2937;
+}
+
+.quote-signature {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 75px;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.cta-section {
+  background-color: white;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-block {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
   background-color: #3882f6;
+  height: 150px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.cta-left h3 {
   color: white;
-  font-weight: 600;
-  padding: 15px 40px;
-  border-radius: 40px;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.cta-left p {
+  margin-top: 3px;
+  color: #e5e7eb;
+  font-weight: 400;
   font-size: 16px;
+}
+
+.cta-right button {
+  background-color: #3882f6;
+  border: 2px solid white;
+  border-radius: 40px;
+  padding: 15px 40px;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2937;
+  padding: 20px 0;
+  color: #e5e7eb;
+  font-weight: 600;
 }
